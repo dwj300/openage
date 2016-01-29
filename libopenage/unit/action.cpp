@@ -413,6 +413,8 @@ void IdleAction::update(unsigned int time) {
 		auto gatherer_attrib = entity->get_attribute<attr_type::gatherer>();
 		if (gatherer_attrib.amount > 0) {
 			this->graphic = graphic_type::carrying;
+		} else {
+			this->graphic = graphic_type::standing;
 		}
 	}
 	else {
@@ -861,7 +863,7 @@ void GatherAction::update_in_range(unsigned int time, Unit *targeted_resource) {
 		// dropsite has been reached
 		// add value to player stockpile
 		Player &player = this->entity->get_attribute<attr_type::owner>().player;
-		player.recieve(gatherer_attr.current_type, gatherer_attr.amount);
+		player.receive(gatherer_attr.current_type, gatherer_attr.amount);
 		gatherer_attr.amount = 0.0f;
 
 		// make sure the resource stil exists

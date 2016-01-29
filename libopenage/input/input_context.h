@@ -1,7 +1,6 @@
 // Copyright 2015-2016 the openage authors. See copying.md for legal info.
 
-#ifndef OPENAGE_INPUT_INPUT_CONTEXT_H_
-#define OPENAGE_INPUT_INPUT_CONTEXT_H_
+#pragma once
 
 #include <functional>
 #include <stack>
@@ -59,9 +58,9 @@ public:
 
 
 	/**
-	 * Affects which keyboard events are recieved:
+	 * Affects which keyboard events are received:
 	 * true to accpet utf8 text events,
-	 * false to recieve regular char events
+	 * false to receive regular char events
 	 */
 	bool utf8_mode;
 
@@ -86,5 +85,3 @@ private:
 };
 
 }} // openage::input
-
-#endif

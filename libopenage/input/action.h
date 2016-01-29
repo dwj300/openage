@@ -1,7 +1,6 @@
 // Copyright 2015-2016 the openage authors. See copying.md for legal info.
 
-#ifndef OPENAGE_INPUT_ACTION_H_
-#define OPENAGE_INPUT_ACTION_H_
+#pragma once
 
 #include <vector>
 
@@ -93,7 +92,7 @@ struct action_arg_t {
 	const coord::window mouse;
 	const coord::window_delta motion;
 
-	// hints for arg reciever
+	// hints for arg receiver
 	// these get set globally in input manager
 	std::vector<action_id_t> hints;
 };
@@ -104,12 +103,10 @@ struct action_arg_t {
 using action_func_t = std::function<void(const action_arg_t &)>;
 
 /**
- * for recievers of sets of events a bool is returned
+ * for receivers of sets of events a bool is returned
  * to indicate if the event was used
  */
 using action_check_t = std::function<bool(const action_arg_t &)>;
 
 
 }} // openage::input
-
-#endif

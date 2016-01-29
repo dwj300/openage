@@ -1,7 +1,6 @@
 // Copyright 2015-2016 the openage authors. See copying.md for legal info.
 
-#ifndef OPENAGE_PLAYER_H_
-#define OPENAGE_PLAYER_H_
+#pragma once
 
 #include <string>
 #include <unordered_map>
@@ -52,7 +51,7 @@ public:
 	/**
 	 * add to stockpile
 	 */
-	void recieve(const game_resource resource, double amount);
+	void receive(const game_resource resource, double amount);
 
 	/**
 	 * remove from stockpile if available
@@ -71,5 +70,3 @@ private:
 };
 
 } // openage
-
-#endif
